@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-display: "Poppins", sans-serif;
-  --font-body: "Nunito", sans-serif;
+  --font-body: "Inter", sans-serif;
 
-  /* Navy & teal, professional medical/doctor theme */
-  --color-linen: #F5F8FA;
-  --color-linen-deep: #EAF1F5;
-  --color-ink: #16232F;
-  --color-forest: #0E5E6F;       /* primary deep teal */
-  --color-forest-deep: #0B2E44;  /* deep navy */
-  --color-sage: #4E9DAE;         /* muted teal */
-  --color-sage-light: #D7E7EB;   /* pale teal-grey */
-  --color-gold: #C08A3E;         /* muted bronze/gold accent, used sparingly */
-  --color-gold-light: #E0B673;
-  --color-clay: #C08A3E;
+  /* Navy & white, professional BookMyDoctors-style theme */
+  --color-linen: #FFFFFF;
+  --color-linen-deep: #F4F6F9;
+  --color-ink: #1A2434;
+  --color-forest: #0F2A45;       /* primary deep navy */
+  --color-forest-deep: #0A1D33;  /* darker navy for hover/footer */
+  --color-sage: #1E8A80;         /* teal accent, used sparingly (icons, quote marks) */
+  --color-sage-light: #E4E9EF;   /* pale grey-blue for borders */
+  --color-gold: #1E8A80;         /* accent alias, kept teal */
+  --color-gold-light: #3FB3A6;
+  --color-clay: #1E8A80;
   --color-cream-card: #FFFFFF;
 }
 
@@ -31,6 +31,25 @@ html, body {
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
   font-weight: 600;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-forest);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 3px;
+  background: var(--color-sage);
+  border-radius: 2px;
 }
 
 ::selection {
@@ -60,7 +79,7 @@ h1, h2, h3, h4, .font-display {
 }
 
 .texture-paper {
-  background-image: radial-gradient(circle at 1px 1px, rgba(14,94,111,0.06) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(15,42,69,0.06) 1px, transparent 0);
   background-size: 22px 22px;
 }
 
@@ -80,10 +99,10 @@ h1, h2, h3, h4, .font-display {
   border-radius: 999px;
   padding: 0.85rem 1.75rem;
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-  box-shadow: 0 8px 22px -8px rgba(14,94,111,0.55);
+  box-shadow: 0 8px 22px -8px rgba(15,42,69,0.55);
   display: inline-block;
 }
-.btn-primary:hover { background: var(--color-forest-deep); transform: translateY(-2px); box-shadow: 0 12px 28px -8px rgba(14,94,111,0.6); }
+.btn-primary:hover { background: var(--color-forest-deep); transform: translateY(-2px); box-shadow: 0 12px 28px -8px rgba(15,42,69,0.6); }
 
 .btn-outline {
   border: 2px solid var(--color-forest);
@@ -100,7 +119,7 @@ h1, h2, h3, h4, .font-display {
   background: var(--color-cream-card);
   border: 1.5px solid var(--color-sage-light);
   border-radius: 1.75rem;
-  box-shadow: 0 16px 36px -18px rgba(11,46,68,0.25);
+  box-shadow: 0 16px 36px -18px rgba(10,29,51,0.25);
 }
 
 @keyframes floaty {
@@ -120,7 +139,7 @@ input, select, textarea {
 }
 input:focus, select:focus, textarea:focus {
   border-color: var(--color-forest);
-  box-shadow: 0 0 0 4px rgba(14,94,111,0.14);
+  box-shadow: 0 0 0 4px rgba(15,42,69,0.14);
   outline: none;
 }
 label { font-size: 0.82rem; font-weight: 700; color: var(--color-forest-deep); margin-bottom: 0.3rem; display: block; }
