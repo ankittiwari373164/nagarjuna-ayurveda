@@ -52,7 +52,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5 md:px-8 pt-14 md:pt-20 pb-16 grid lg:grid-cols-2 gap-12 items-center relative">
           <div>
             <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="eyebrow mb-4">
-              NAKC · Station Road, Shikohabad
+              NAKC · Shikohabad, Firozabad, U.P.
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}

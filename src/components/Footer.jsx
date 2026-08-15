@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Leaf } from 'lucide-react'
+import { Phone, MapPin, Clock, Leaf, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
@@ -32,9 +32,19 @@ export default function Footer() {
         <div>
           <p className="eyebrow mb-4">Reach Us</p>
           <ul className="space-y-3 text-sm text-[var(--color-linen)]/85">
-            <li className="flex gap-2"><MapPin size={16} className="text-[var(--color-gold-light)] shrink-0 mt-0.5" /> Station Road, Shikohabad, U.P.</li>
+            <li className="flex gap-2"><MapPin size={16} className="text-[var(--color-gold-light)] shrink-0 mt-0.5" /> 2C/108, Awas Vikas Colony, Near LIC Office, Shikohabad, Firozabad, Uttar Pradesh – 283135</li>
             <li className="flex gap-2"><Phone size={16} className="text-[var(--color-gold-light)] shrink-0 mt-0.5" /> +91 76683 53121 / +91 88649 90210</li>
             <li className="flex gap-2"><Clock size={16} className="text-[var(--color-gold-light)] shrink-0 mt-0.5" /> Daily, 5:00 PM – 8:00 PM (Sun closed)</li>
+            <li>
+              <a
+                href="https://g.page/r/CXScgG6rZ0PsEBE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[var(--color-gold-light)] hover:text-white font-semibold underline underline-offset-4 decoration-[var(--color-gold-light)]/50"
+              >
+                <Star size={16} className="shrink-0" /> Rate & Review Us on Google
+              </a>
+            </li>
           </ul>
         </div>
       </div>

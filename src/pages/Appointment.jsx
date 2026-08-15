@@ -24,7 +24,7 @@ export default function Appointment() {
             <MapPin className="text-[var(--color-gold)] shrink-0" size={20} />
             <div>
               <p className="font-semibold text-[var(--color-forest-deep)] text-sm">Location</p>
-              <p className="text-sm text-[var(--color-ink)]/60">NAKC, Station Road, Shikohabad, U.P.</p>
+              <p className="text-sm text-[var(--color-ink)]/60">NAKC, 2C/108, Awas Vikas Colony, Near LIC Office, Shikohabad, Firozabad, U.P. – 283135</p>
             </div>
           </div>
           <div className="flex gap-3">

@@ -29,7 +29,7 @@ export default function Navbar() {
           <span className="flex items-center gap-1.5"><Phone size={13} className="text-[var(--color-gold-light)]" /> +91 76683 53121</span>
           <span className="flex items-center gap-1.5"><Clock size={13} className="text-[var(--color-gold-light)]" /> Daily 5–8 PM (Sun closed)</span>
         </div>
-        <span className="flex items-center gap-1.5"><Mail size={13} className="text-[var(--color-gold-light)]" /> Station Road, Shikohabad, U.P.</span>
+        <span className="flex items-center gap-1.5"><Mail size={13} className="text-[var(--color-gold-light)]" /> 2C/108, Awas Vikas Colony, Near LIC Office, Shikohabad, Firozabad, U.P. – 283135</span>
       </div>
 
       {/* Main navbar */}

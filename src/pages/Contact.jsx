@@ -28,7 +28,7 @@ export default function Contact() {
           Have a question before booking? Send us a message and our team will call you back within a day.
         </p>
         <div className="space-y-5 mb-10">
-          <div className="flex gap-3"><MapPin className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">Station Road, Shikohabad, Uttar Pradesh</p></div>
+          <div className="flex gap-3"><MapPin className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">2C/108, Awas Vikas Colony, Near LIC Office, Shikohabad, Firozabad, Uttar Pradesh – 283135</p></div>
           <div className="flex gap-3"><Phone className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">+91 94570 88602 · +91 76683 53121 · +91 88649 90210</p></div>
           <div className="flex gap-3"><Clock className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">Daily 5–8 PM, Sunday closed</p></div>
         </div>
@@ -37,7 +37,7 @@ export default function Contact() {
             title="Clinic location"
             className="w-full h-full"
             loading="lazy"
-            src="https://www.google.com/maps?q=Station+Road,+Shikohabad,+Uttar+Pradesh&output=embed"
+            src="https://www.google.com/maps?q=2C%2F108+Awas+Vikas+Colony+Near+LIC+Office+Shikohabad+Firozabad+Uttar+Pradesh+283135&output=embed"
           />
         </div>
       </Reveal>
