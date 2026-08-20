@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="hidden md:flex items-center justify-between bg-[var(--color-forest-deep)] text-white text-xs px-8 py-2">
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-1.5"><Phone size={13} className="text-[var(--color-gold-light)]" /> +91 76683 53121</span>
-          <span className="flex items-center gap-1.5"><Clock size={13} className="text-[var(--color-gold-light)]" /> Daily 5–8 PM (Sun closed)</span>
+          <span className="flex items-center gap-1.5"><Clock size={13} className="text-[var(--color-gold-light)]" /> Daily 4–8 PM · Sun 10AM–1PM</span>
         </div>
         <span className="flex items-center gap-1.5"><Mail size={13} className="text-[var(--color-gold-light)]" /> 2C/108, Awas Vikas Colony, Near LIC Office, Shikohabad, Firozabad, U.P. – 283135</span>
       </div>

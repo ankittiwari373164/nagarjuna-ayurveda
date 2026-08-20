@@ -29,8 +29,8 @@ export default function Contact() {
         </p>
         <div className="space-y-5 mb-10">
           <div className="flex gap-3"><MapPin className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">2C/108, Awas Vikas Colony, Near LIC Office, Shikohabad, Firozabad, Uttar Pradesh – 283135</p></div>
-          <div className="flex gap-3"><Phone className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">+91 94570 88602 · +91 76683 53121 · +91 88649 90210</p></div>
-          <div className="flex gap-3"><Clock className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">Daily 5–8 PM, Sunday closed</p></div>
+          <div className="flex gap-3"><Phone className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">+91 76683 53121 · +91 88649 90210</p></div>
+          <div className="flex gap-3"><Clock className="text-[var(--color-gold)]" size={20} /><p className="text-sm text-[var(--color-ink)]/70">Daily 4:00 PM – 8:00 PM · Sunday 10:00 AM – 1:00 PM</p></div>
         </div>
         <div className="rounded-2xl overflow-hidden border border-[var(--color-sage-light)] h-64">
           <iframe

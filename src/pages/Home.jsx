@@ -228,7 +228,7 @@ export default function Home() {
             <div className="absolute -top-10 -right-10 w-56 h-56 rounded-full bg-[var(--color-gold)] opacity-20 blur-3xl" />
             <h2 className="font-display text-3xl md:text-4xl mb-4">Book your consultation this week</h2>
             <p className="text-[var(--color-linen)]/75 max-w-xl mx-auto mb-8">
-              Appointments open daily, 5:00 PM to 8:00 PM (Sunday closed). Slots are limited to give every patient enough time.
+              Appointments open daily, 4:00 PM to 8:00 PM, and Sunday 10:00 AM to 1:00 PM. Slots are limited to give every patient enough time.
             </p>
             <Link to="/appointment" className="btn-primary !bg-[var(--color-gold)] !text-[var(--color-forest-deep)]">Book Appointment</Link>
           </div>

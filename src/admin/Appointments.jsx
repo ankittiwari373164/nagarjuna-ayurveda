@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { supabase, supabaseReady } from '../lib/supabaseClient'
 import { exportToExcel } from '../lib/exportExcel'
-import { Download, Search } from 'lucide-react'
+import { Download, Search, ImageOff } from 'lucide-react'
 
 const statuses = ['pending', 'confirmed', 'completed', 'cancelled']
 
@@ -47,6 +47,7 @@ export default function Appointments() {
       Name: a.full_name, Phone: a.phone, Email: a.email, Age: a.age, Gender: a.gender,
       Condition: a.condition, Date: a.preferred_date, Time: a.preferred_time,
       Status: a.status, Payment: a.payment_status, Amount: a.amount, 'Payment Note': a.payment_note,
+      'Transaction ID': a.transaction_id, 'Payment Screenshot': a.payment_screenshot_url,
       Message: a.message, 'Booked On': new Date(a.created_at).toLocaleString(),
     })), 'appointments.xlsx', 'Appointments')
   }
@@ -78,11 +79,11 @@ export default function Appointments() {
       </div>
 
       <div className="card-soft p-6 overflow-x-auto">
-        <table className="w-full text-sm min-w-[900px]">
+        <table className="w-full text-sm min-w-[1000px]">
           <thead>
             <tr className="text-left text-[var(--color-ink)]/50 border-b border-[var(--color-sage-light)]">
               <th className="py-2 pr-4">Name</th><th className="py-2 pr-4">Phone</th><th className="py-2 pr-4">Date/Time</th>
-              <th className="py-2 pr-4">Condition</th><th className="py-2 pr-4">Payment</th><th className="py-2 pr-4">Status</th>
+              <th className="py-2 pr-4">Condition</th><th className="py-2 pr-4">Payment</th><th className="py-2 pr-4">Proof</th><th className="py-2 pr-4">Status</th>
             </tr>
           </thead>
           <tbody>
@@ -109,6 +110,26 @@ export default function Appointments() {
                   <p className="text-[0.65rem] text-[var(--color-ink)]/40 mt-1">₹{a.amount}</p>
                 </td>
                 <td className="py-3 pr-4">
+                  {a.payment_screenshot_url ? (
+                    <a href={a.payment_screenshot_url} target="_blank" rel="noopener noreferrer" className="block">
+                      <img
+                        src={a.payment_screenshot_url}
+                        alt="Payment screenshot"
+                        className="w-14 h-14 object-cover rounded-lg border border-[var(--color-sage-light)] hover:opacity-80 transition-opacity"
+                      />
+                    </a>
+                  ) : (
+                    <div className="w-14 h-14 flex items-center justify-center rounded-lg border border-dashed border-[var(--color-sage-light)] text-[var(--color-ink)]/25">
+                      <ImageOff size={18} />
+                    </div>
+                  )}
+                  {a.transaction_id && (
+                    <p className="text-[0.65rem] text-[var(--color-ink)]/50 mt-1 max-w-[110px] truncate" title={a.transaction_id}>
+                      Txn: {a.transaction_id}
+                    </p>
+                  )}
+                </td>
+                <td className="py-3 pr-4">
                   <select value={a.status} onChange={e => updateStatus(a.id, e.target.value)} className={`!py-1.5 !px-2 text-xs font-semibold rounded-full ${badge(a.status)}`}>
                     {statuses.map(s => <option key={s} value={s}>{s}</option>)}
                   </select>
@@ -116,7 +137,7 @@ export default function Appointments() {
               </tr>
             ))}
             {!loading && filtered.length === 0 && (
-              <tr><td colSpan={6} className="py-8 text-center text-[var(--color-ink)]/40">No appointments found.</td></tr>
+              <tr><td colSpan={7} className="py-8 text-center text-[var(--color-ink)]/40">No appointments found.</td></tr>
             )}
           </tbody>
         </table>

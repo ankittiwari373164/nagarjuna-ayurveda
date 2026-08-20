@@ -17,7 +17,7 @@ export default function Appointment() {
             <Clock className="text-[var(--color-gold)] shrink-0" size={20} />
             <div>
               <p className="font-semibold text-[var(--color-forest-deep)] text-sm">Clinic Hours</p>
-              <p className="text-sm text-[var(--color-ink)]/60">Daily, 5:00 PM – 8:00 PM (Sunday closed)</p>
+              <p className="text-sm text-[var(--color-ink)]/60">Daily, 4:00 PM – 8:00 PM · Sunday, 10:00 AM – 1:00 PM</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -31,7 +31,7 @@ export default function Appointment() {
             <Phone className="text-[var(--color-gold)] shrink-0" size={20} />
             <div>
               <p className="font-semibold text-[var(--color-forest-deep)] text-sm">Call Direct</p>
-              <p className="text-sm text-[var(--color-ink)]/60">+91 94570 88602 · +91 76683 53121</p>
+              <p className="text-sm text-[var(--color-ink)]/60">+91 76683 53121 · +91 88649 90210</p>
             </div>
           </div>
         </div>
